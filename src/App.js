@@ -47,7 +47,14 @@ function App() {
                 <Table
                     searchValue = {searchValue}
                     pokemonList={pokemonList}
-                    onLoading = {() => <LoadSkeleton />}
+                    onLoading = {() => (
+                        <>                            
+                            <LoadSkeleton />
+                            <LoadSkeleton />
+                            <LoadSkeleton />
+                            <LoadSkeleton />
+                        </>
+                    )}
                     onEmpty = {(msg) => <EmptyTodo img={""} msg={msg} />}
                     render = { (pokemon) =>  //console.log(pokemon.title)
                         <Item key={pokemon.id} pokemon= {pokemon} selectPokemon={selectPokemon}/>

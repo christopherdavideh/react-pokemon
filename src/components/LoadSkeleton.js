@@ -1,5 +1,5 @@
-import React from "react"
-//import ContentLoader from "react-content-loader"
+import React from "react";
+import '../css/load.css'
 
 function LoadSkeleton() {
   /*<ContentLoader 
@@ -17,11 +17,31 @@ function LoadSkeleton() {
   </ContentLoader>*/
   return(
     <tr>
-      <td>Cargando..</td>
-      <td>Cargando..</td>
-      <td>Cargando..</td>
-      <td>Cargando..</td>
-      <td>Cargando..</td>
+      <td>
+        <div class="category-container__load">
+          <div class="category-container__text-load"></div>
+        </div>
+      </td>
+      <td>
+        <div class="category-container__load">
+          <div class="category-container__text-load"></div>
+        </div>
+      </td>
+      <td>
+        <div class="category-container__load">
+          <div class="category-container__text-load"></div>
+        </div>
+      </td>
+      <td>
+        <div class="category-container__load">
+          <div class="category-container__text-load"></div>
+        </div>
+      </td>
+      <td>
+        <div class="category-container__load">
+          <div class="category-container__text-load"></div>
+        </div>
+      </td>
     </tr>
   );
 }

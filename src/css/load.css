@@ -1,0 +1,36 @@
+.category-container__load {
+    width: 80%;
+    min-width: 108px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    animation-name: imageLoad;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.category-container__load:nth-child(2){
+    animation-delay: .3s;
+}
+.category-container__load:nth-child(3){
+    animation-delay: .6s;
+}
+
+.category-container__load:nth-child(5){
+    animation-delay: .3s;
+}
+.category-container__load:nth-child(6){
+    animation-delay: .6s;
+}
+
+@keyframes imageLoad {
+    0%, 100% {
+        background: var(--border-color);
+    }
+    
+    50% {
+        background: transparent;
+    }
+}
