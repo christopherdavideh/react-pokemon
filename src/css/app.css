@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #6657F5;
+    --secondary-color: #6C5CD2;
+    --border-color:#C7CBCC;
+    --text-color-primary: #42474D;
+    --text-color-secondary: #2F3841;
+    --text-color-light: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url('../img/tapiz.svg');
+    background-repeat: repeat;
+    background-position: center;
+    color: #18191a;
+    font-size: 1.6rem;
+    color: var(--text-color-primary);
+}
+
+
+.empty-todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.empty-todo-container p {
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #d961fa;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgba(143, 50, 183, 0.723);
+    margin-bottom: 10px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Sweet Alerts*/
+.colored-toast.swal2-icon-success {
+    background-color: #5ab88c !important;
+}
+
+.colored-toast.swal2-icon-error {
+    background-color: rgb(222, 76, 76) !important;
+}
+
+.colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+}
+
+.colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title {
+    color: white;
+}
+
+.colored-toast .swal2-close {
+    color: white;
+}
+
+.colored-toast .swal2-html-container {
+    color: white;
+}
+
+.colored-btn.swal2-icon-error {
+    background-color: rgb(222, 76, 76) !important;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--text-color-light);
+    width: 70px;
+    margin: 0 10px;
+}
+
+.colored-btn.swal2-icon-success {
+    background-color: #5ab88c !important;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--text-color-light);
+    width: 70px;
+    margin: 0 10px;
+    outline: none;
+}
+

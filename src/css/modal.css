@@ -1,0 +1,163 @@
+.modal-background {
+    background: rgba(32,35,41,.8);
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+form {
+    width: 80%;
+    min-width: 288px;
+    max-width: 800px;
+    background-color: var(--text-color-light);
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin: 0 auto;    
+    border: 3px var(--border-color) solid;
+    min-height: 300px;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--text-color-primary);
+    width: 10%;
+}
+
+.modal-background h2 {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.modal-background input {
+    background-color: var(--text-color-light);
+    border-radius: 4px;
+    color: #1E1E1F;
+    font-size: 1.6rem;
+    padding: 12px;
+    height: 40px;
+    width: 30%;
+    margin: 10px 0;
+    outline: none;
+    border: 2px var(--border-color) solid;
+}
+
+form .form-title__delete{
+    margin-top: 70px;
+}
+
+.form-button-container {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.form-button {
+    cursor: pointer;
+    display: flex;
+    font-size: 1.6rem;
+    color: #202329;
+    font-weight: 600;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-button--add {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.form-button--add:disabled {
+    opacity: 60%;
+}
+
+.form-button--cancel {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.form-button-container__save-icon{
+    display: inline-block;
+    background-image: url('../icon/save_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.form-button-container__edit-icon{
+    display: inline-block;
+    background-image: url('../icon/edit_icon _light.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.form-button-container__check-icon{
+    display: inline-block;
+    background-image: url('../icon/check_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.form-button-container__cancel-icon{
+    display: inline-block;
+    background-image: url('../icon/cancel_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 695px) {
+    .form-section {
+    }
+
+    .modal-background input {
+        width: 85%;
+    }
+    .modal-background label {
+        width: 100%;
+    }
+}

@@ -1,0 +1,80 @@
+main {
+    width: 100%;
+    min-width: 320px;
+    min-height: 70%;
+    text-align: center;
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.main-table {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    background-color: var(--text-color-light);
+
+}
+
+.main-table td, .main-table th{
+    border: 3px var(--border-color) solid;
+    padding: 10px;
+}
+
+.error-img {
+    margin-top: 40px;
+}
+
+.main-table__delete {
+    margin: 0 10px;
+}
+
+
+.main-table__delete {
+    display: inline-block;
+    background-image: url('../icon/delete_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.main-table__delete:hover {
+    width: 30px;
+    height: 35px;
+}
+
+.main-table__edit {
+    display: inline-block;
+    background-image: url('../icon/edit_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.main-table__edit:hover {
+    width: 30px;
+    height: 35px;
+}
+
+
+.main-table__calendar {
+    display: inline-block;
+    background-image: url('../icon/calendar_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
