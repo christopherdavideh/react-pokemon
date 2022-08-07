@@ -12,13 +12,13 @@ import {Item} from "./components/Item";
 import { Modal } from "./components/Modal";
 import { Form } from "./components/Form";
 import { LoadSkeleton } from "./components/LoadSkeleton";
-import { EmptyTodo } from "./components/EmptyTodo";
+import { Empty } from "./components/Empty";
 import { Error } from "./components/Error";
 
 function App() {
     const {
         searchValue,
-        setSearchValue,
+        onChange,
         pokemonList,
         addPokemon,
         selectPokemon,
@@ -38,7 +38,7 @@ function App() {
     return (
       <React.Fragment>
             <Header>
-                <Search searchValue = {searchValue} setSearchValue = {setSearchValue} loading={loading}/>
+                <Search searchValue = {searchValue} loading={loading} onChange = {onChange}/>
                 <CreateButton setOpenModal= {setOpenModal} />
             </Header>
             {!!error && (<Main><Error error = {error} /></Main>)}
@@ -48,14 +48,14 @@ function App() {
                     searchValue = {searchValue}
                     pokemonList={pokemonList}
                     onLoading = {() => (
-                        <>                            
+                        <>
                             <LoadSkeleton />
                             <LoadSkeleton />
                             <LoadSkeleton />
                             <LoadSkeleton />
                         </>
                     )}
-                    onEmpty = {(msg) => <EmptyTodo img={""} msg={msg} />}
+                    onEmpty = {(msg) => <Empty img={""} msg={msg} />}
                     render = { (pokemon) =>  //console.log(pokemon.title)
                         <Item key={pokemon.id} pokemon= {pokemon} selectPokemon={selectPokemon}/>
 

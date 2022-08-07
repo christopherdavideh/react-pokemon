@@ -18,28 +18,28 @@ function LoadSkeleton() {
   return(
     <tr>
       <td>
-        <div class="category-container__load">
-          <div class="category-container__text-load"></div>
+        <div className="category-container__load">
+          <div className="category-container__text-load">.</div>
         </div>
       </td>
       <td>
-        <div class="category-container__load">
-          <div class="category-container__text-load"></div>
+        <div className="category-container__load">
+          <div className="category-container__text-load"></div>
         </div>
       </td>
       <td>
-        <div class="category-container__load">
-          <div class="category-container__text-load"></div>
+        <div className="category-container__load">
+          <div className="category-container__text-load"></div>
         </div>
       </td>
       <td>
-        <div class="category-container__load">
-          <div class="category-container__text-load"></div>
+        <div className="category-container__load">
+          <div className="category-container__text-load"></div>
         </div>
       </td>
       <td>
-        <div class="category-container__load">
-          <div class="category-container__text-load"></div>
+        <div className="category-container__load">
+          <div className="category-container__text-load"></div>
         </div>
       </td>
     </tr>

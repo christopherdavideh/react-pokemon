@@ -16,8 +16,13 @@ function usePokemon(){
 
     /* Funcion para Obtener la lista de Pokemones */
     const getPokemon = async () => {
-        const { data } = await axios.get(`${BASE_URL}/?idAuthor=1`);
+        const { data, status } = await axios.get(`${BASE_URL}/?idAuthor=1`);
         setPokemon(data);
+        if (status !== 200) {
+            setError(`Error ${status}: Se ha pruducido un error inesperado`);
+        }else{
+            setError(false);
+        }
     }
 
     useEffect(()=>{
@@ -35,9 +40,15 @@ function usePokemon(){
     /* Funcion para Guardar Pokemons consumiendo la API*/
     const savePokemon = async (dataPokemon) => {
         try {
-            const { data } = await axios.post(`${BASE_URL}/?idAuthor=1`,dataPokemon);
+            const { status } = await axios.post(`${BASE_URL}/?idAuthor=1`,dataPokemon);
             setOpenModal([false, ""]);
+            setActive(true);
             getPokemon();
+            if (status !== 200) {
+                setError(`Error ${status}: Se ha pruducido un error inesperado`);
+            }else{
+                setError(false);
+            }
         } catch (error) {
             setError(error);
         }
@@ -47,16 +58,9 @@ function usePokemon(){
     const addPokemon = async (newPokemon) => {
         const {name, image, attack, defense} = newPokemon
         if (name === "" || image === "" || attack === "" || defense === "") {
-            /*await Toast.fire({
-                icon: 'error',
-                name: 'Error! one or more empty fields'
-            })*/
+            setError("Error! existen campos vacios");
         } else {
             savePokemon(newPokemon);
-            /*await Toast.fire({
-                icon: 'success',
-                name: 'Success! The task has been saved successfully'
-            })*/
         }
     };
 
@@ -69,10 +73,14 @@ function usePokemon(){
     /* Funcion para actualizar los datos del pokemon consumiendo la API*/
     const updatePokemon = async (id, pokemon) => {
         try {
-            const { data } = await axios.put(`${BASE_URL}/${id}`,pokemon);
-            console.log(data);
+            const { status } = await axios.put(`${BASE_URL}/${id}`,pokemon);
             setOpenModal([false, ""]);
             getPokemon();
+            if (status !== 200) {
+                setError(`Error ${status}: Se ha pruducido un error inesperado`);
+            }else{
+                setError(false);
+            }
         } catch (error) {
             setError(error);
         }
@@ -82,31 +90,34 @@ function usePokemon(){
     const editPokemon = async (id, pokemon) => {
         const {name, image, attack, defense} = pokemon
         if (name === "" || image === "" || attack === "" || defense === "") {
-            /*await Toast.fire({
-                icon: 'error',
-                name: 'Error! one or more empty fields'
-            })*/
+            setError("Error! existen campos vacios");
         } else {
             updatePokemon(id, pokemon);
-            /*await Toast.fire({
-                icon: 'success',
-                name: 'Success! The task has been saved successfully'
-            })*/
         }
     };
 
     /* Logica para eliminar un pokemon consumiendo la API */
     const deletePokemon = async (id, pokemon) => {
         try {
-            const { data } = await axios.delete(`${BASE_URL}/${id}`,pokemon);
+            const { status } = await axios.delete(`${BASE_URL}/${id}`,pokemon);
             setOpenModal([false, ""]);
             getPokemon();
+            if (status !== 200) {
+                setError(`Error ${status}: Se ha pruducido un error inesperado`);
+            }else{
+                setError(false);
+            }
         } catch (error) {
             setError(error);
         }
     }
 
     /* Logica para la Busqueda de Pokemones */
+
+    const onChange = (value) => {
+        setSearchValue(value);
+    }
+
     if (!searchValue.length > 0) {
         pokemonList = [...pokemons];
 
@@ -120,27 +131,9 @@ function usePokemon(){
         });
     }
 
-
-    const deleteTask = (id) => {
-        const todoIndex = pokemons.findIndex( task => task.id === id);
-        const newTasks = [...pokemons];
-        newTasks.splice(todoIndex, 1);
-        //savedTask(newTasks); 
-        /*swalWithBootstrapButtons.fire({
-            name: 'Deleted!',
-            text: 'Your file has been deleted.',
-            icon: 'success',
-            color: '#f0f0f0',
-            background: '#433170',
-            backdrop: `
-                rgba(0,0,0,0.4)
-            `
-        })*/
-    }
-
     return {
         searchValue,
-        setSearchValue,
+        onChange,
         pokemonList,
         addPokemon,
         selectPokemon,
