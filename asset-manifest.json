@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-pokemon/static/css/main.8e17c93e.css",
+    "main.js": "/react-pokemon/static/js/main.57b3642d.js",
+    "static/js/787.80b0b2f2.chunk.js": "/react-pokemon/static/js/787.80b0b2f2.chunk.js",
+    "static/media/tapiz.svg": "/react-pokemon/static/media/tapiz.e878c61eed436797ce4b.svg",
+    "static/media/calendar_icon.svg": "/react-pokemon/static/media/calendar_icon.d17f5bafdce63e499a36.svg",
+    "index.html": "/react-pokemon/index.html",
+    "static/media/cancel_icon.svg": "/react-pokemon/static/media/cancel_icon.61aacc19fae7e9c34fc4.svg",
+    "static/media/delete_icon.svg": "/react-pokemon/static/media/delete_icon.441e67698e538ee8b61c.svg",
+    "static/media/edit_icon.svg": "/react-pokemon/static/media/edit_icon.751d041de19cdc87746c.svg",
+    "static/media/edit_icon _light.svg": "/react-pokemon/static/media/edit_icon _light.02a77af5a5fedb6a7add.svg",
+    "static/media/check_icon.svg": "/react-pokemon/static/media/check_icon.7b505dd653e1b13e1387.svg",
+    "static/media/search_icon.svg": "/react-pokemon/static/media/search_icon.4ce822bc83707e5443b0.svg",
+    "static/media/save_icon.svg": "/react-pokemon/static/media/save_icon.df4d9e1c848ee8df9949.svg",
+    "static/media/add_icon.svg": "/react-pokemon/static/media/add_icon.574c1870d2722281dd2f.svg",
+    "main.8e17c93e.css.map": "/react-pokemon/static/css/main.8e17c93e.css.map",
+    "main.57b3642d.js.map": "/react-pokemon/static/js/main.57b3642d.js.map",
+    "787.80b0b2f2.chunk.js.map": "/react-pokemon/static/js/787.80b0b2f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e17c93e.css",
+    "static/js/main.57b3642d.js"
+  ]
+}
